@@ -52,13 +52,13 @@ int input() {
 }
 
 int display() {
-	int numInput = input();
+	float numInput = input();
 	int temperature;
 	string stars;
 	//cin >> temperature;
 	temperature = numInput;
 	if (numInput < 0) {
-		numInput = numInput / -3;
+		numInput = round(numInput / -3);
 		while (numInput > 0) {
 			numInput--;
 			stars = stars + "*";
@@ -70,7 +70,7 @@ int display() {
 		cout << "	" << stars << "|";
 	}
 	if (numInput > 0) {
-		numInput = numInput / 3;
+		numInput = round(numInput / 3);
 		while (numInput > 0) {
 			numInput--;
 			stars = stars + "*";
